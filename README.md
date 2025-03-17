@@ -29,7 +29,7 @@ Este script permite adicionar frases com suas respectivas traduções e pronúnc
 
 1. Faça o download ou clone o repositório:
    ```bash
-   git clone https://github.com/seu-usuario/terminal-lang.git
+   git clone https://github.com/Gazaxian/Terminallang-sqlite.git
    ```
 
 2. Navegue até o diretório do projeto:
@@ -88,16 +88,6 @@ sqlite3 ~/Documentos/Ingles/frases.db
 ```
 
 No terminal do SQLite, você pode usar comandos como `SELECT * FROM frases;` para visualizar os dados.
-
-## Contribuindo
-
-Se você deseja contribuir para o desenvolvimento do TerminalLang, sinta-se à vontade para abrir um **pull request** ou **issue** no repositório do GitHub.
-
-1. Fork o repositório.
-2. Crie uma nova branch (`git checkout -b minha-nova-feature`).
-3. Faça suas alterações e commit (`git commit -am 'Adiciona nova funcionalidade'`).
-4. Push para a branch (`git push origin minha-nova-feature`).
-5. Abra um Pull Request.
 
 ## Licença
 
