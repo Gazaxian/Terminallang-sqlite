@@ -83,7 +83,7 @@ Este projeto é ideal para quem deseja aprender idiomas de maneira prática e di
 
 ## Personalizações
 
-- **Localização do Banco de Dados SQLite**: O banco de dados SQLite onde as frases são armazenadas está configurado para ser salvo em `~/Documentos/terminallang-sqlite/frases.db`. Caso deseje alterar, edite a variável `DB_PATH` no início do script.
+- **Localização do Banco de Dados SQLite**: O banco de dados SQLite onde as frases são armazenadas está configurado para ser salvo em `~/frases.db`. Caso deseje alterar, edite a variável `DB_PATH` no início do script.
 
 - **Número de Frases por Página**: O número de frases exibidas por página pode ser ajustado a qualquer momento através da opção "Alterar limite de frases por página" no menu principal.
 
