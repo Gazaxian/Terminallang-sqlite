@@ -14,18 +14,18 @@ Este projeto é ideal para quem deseja aprender idiomas de maneira prática e di
 
 ## Como Usar
 
-1. **Menu de Opções**
-
+1. **Menu de Opções**:
    Após iniciar o script, você verá um menu com as seguintes opções:
 
-1) ✏️ Adicionar frases
-2) 📖 Ver todas as frases
-3) 🔍 Pesquisar frases
-4) ⚙️ Alterar limite de frases por página
-5) 🧹 Limpar terminal
-6) ❌ Sair
-Use os números para escolher a opção desejada.
+   - `1) ✏️ Adicionar frases`
+   - `2) 📖 Ver todas as frases`
+   - `3) 🔍 Pesquisar frases`
+   - `4) ⚙️ Alterar limite de frases por página`
+   - `5) 🧹 Limpar terminal`
+   - `6) ❌ Sair`
 
+   Use os números para escolher a opção desejada.
+   
 2. **Adicionar Frases**
    
    Para adicionar frases, digite a frase em inglês, inclua a pronúncia entre parênteses e a tradução entre colchetes. Exemplo:
