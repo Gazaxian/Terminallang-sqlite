@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Banco de dados SQLite
-DB="$HOME/Documentos/terminallang-sqlite/frases.db"
+DB="$HOME/frases.db"
 
 # Criar banco de dados e tabela se não existir
 if [ ! -f "$DB" ]; then
