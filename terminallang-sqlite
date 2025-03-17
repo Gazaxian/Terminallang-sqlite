@@ -164,7 +164,7 @@ alterar_limite() {
 
 # Menu principal
 while true; do
-    echo -e "\n📚 ${BRANCO}Terminallang - Anotações de Frases Ilimitadas${RESET}\n"
+    echo -e "\n📚 ${BRANCO}Terminallang-sqlite - Anotações de Frases Ilimitadas${RESET}\n"
     echo -e "${AZUL}1) ✏️ Adicionar frases${RESET}"
     echo -e "${VERDE}2) 📖 Ver todas as frases${RESET}"
     echo -e "${AMARELO}3) 🔍 Pesquisar frases${RESET}"
