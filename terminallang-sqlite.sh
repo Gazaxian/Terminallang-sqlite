@@ -6,6 +6,7 @@ DB="$HOME/frases.db"
 # Criar banco de dados e tabela se não existir
 if [ ! -f "$DB" ]; then
     sqlite3 "$DB" "CREATE TABLE frases (id INTEGER PRIMARY KEY AUTOINCREMENT, frase TEXT);"
+    sqlite3 "$DB" "CREATE INDEX idx_frase ON frases(frase);"
 fi
 
 # Cores
@@ -164,7 +165,7 @@ alterar_limite() {
 
 # Menu principal
 while true; do
-    echo -e "\n📚 ${BRANCO}Terminallang-sqlite - Anotações de Frases Ilimitadas${RESET}\n"
+    echo -e "\n📚 ${BRANCO}Terminallang-SQLite - Anotações de Frases Ilimitadas${RESET}\n"
     echo -e "${AZUL}1) ✏️ Adicionar frases${RESET}"
     echo -e "${VERDE}2) 📖 Ver todas as frases${RESET}"
     echo -e "${AMARELO}3) 🔍 Pesquisar frases${RESET}"
