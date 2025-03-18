@@ -7,6 +7,9 @@ DB="$HOME/frases.db"
 if [ ! -f "$DB" ]; then
     sqlite3 "$DB" "CREATE TABLE frases (id INTEGER PRIMARY KEY AUTOINCREMENT, frase TEXT);"
     sqlite3 "$DB" "CREATE INDEX idx_frase ON frases(frase);"
+    sqlite3 "$DB" "PRAGMA synchronous = OFF;"
+    sqlite3 "$DB" "PRAGMA journal_mode = WAL;"
+
 fi
 
 # Cores
