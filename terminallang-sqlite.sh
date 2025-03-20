@@ -173,16 +173,16 @@ while true; do
     echo -e "${AZUL}1) ✏️ Adicionar frases${RESET}"
     echo -e "${VERDE}2) 📖 Ver todas as frases${RESET}"
     echo -e "${AMARELO}3) 🔍 Pesquisar frases${RESET}"
-    echo -e "${VERMELHO}5) 🧹 Limpar terminal${RESET}"
-    echo -e "${BRANCO}6) ❌ Sair${RESET}"
+    echo -e "${VERMELHO}4) 🧹 Limpar terminal${RESET}"
+    echo -e "${BRANCO}5) ❌ Sair${RESET}"
     read -p "Escolha uma opção: " opcao
 
     case $opcao in
         1) adicionar_frases ;;
         2) exibir_frases ;;
         3) pesquisar_frases ;;
-        5) limpar_terminal ;;
-        6) echo -e "${VERMELHO}Saindo...${RESET}"; exit 0 ;;
+        4) limpar_terminal ;;
+        5) echo -e "${VERMELHO}Saindo...${RESET}"; exit 0 ;;
         *) echo -e "${VERMELHO}Opção inválida!${RESET}" ;;
     esac
 
