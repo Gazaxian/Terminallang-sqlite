@@ -9,7 +9,6 @@ if [ ! -f "$DB" ]; then
     sqlite3 "$DB" "CREATE INDEX idx_frase ON frases(frase);"
     sqlite3 "$DB" "PRAGMA synchronous = OFF;"
     sqlite3 "$DB" "PRAGMA journal_mode = WAL;"
-
 fi
 
 # Cores
@@ -83,11 +82,12 @@ exibir_frases() {
             done
 
             echo -e "${AZUL}Página $((pagina + 1))/$total_paginas${RESET}"
-            echo -e "[N] Próxima página | [P] Página anterior | [Q] Sair"
+            echo -e "[N] Próxima página | [P] Página anterior | [L] Alterar limite | [Q] Sair"
             read -n 1 -s resposta
             case "$resposta" in
                 n|N) [[ $pagina -lt $((total_paginas - 1)) ]] && ((pagina++)) ;;
                 p|P) [[ $pagina -gt 0 ]] && ((pagina--)) ;;
+                l|L) alterar_limite ;;  # Chama a função para alterar o limite
                 q|Q) clear; break ;;
             esac
         done
@@ -137,11 +137,12 @@ pesquisar_frases() {
             done
 
             echo -e "${AZUL}Página $((pagina + 1))/$total_paginas${RESET}"
-            echo -e "[N] Próxima página | [P] Página anterior | [Q] Sair"
+            echo -e "[N] Próxima página | [P] Página anterior | [L] Alterar limite | [Q] Sair"
             read -n 1 -s resposta
             case "$resposta" in
                 n|N) [[ $pagina -lt $((total_paginas - 1)) ]] && ((pagina++)) ;;
                 p|P) [[ $pagina -gt 0 ]] && ((pagina--)) ;;
+                l|L) alterar_limite ;;  # Chama a função para alterar o limite
                 q|Q) clear; break ;;
             esac
         done
@@ -172,7 +173,6 @@ while true; do
     echo -e "${AZUL}1) ✏️ Adicionar frases${RESET}"
     echo -e "${VERDE}2) 📖 Ver todas as frases${RESET}"
     echo -e "${AMARELO}3) 🔍 Pesquisar frases${RESET}"
-    echo -e "${LARANJA}4) ⚙️ Alterar limite de frases por página${RESET}"
     echo -e "${VERMELHO}5) 🧹 Limpar terminal${RESET}"
     echo -e "${BRANCO}6) ❌ Sair${RESET}"
     read -p "Escolha uma opção: " opcao
@@ -181,7 +181,6 @@ while true; do
         1) adicionar_frases ;;
         2) exibir_frases ;;
         3) pesquisar_frases ;;
-        4) alterar_limite ;;
         5) limpar_terminal ;;
         6) echo -e "${VERMELHO}Saindo...${RESET}"; exit 0 ;;
         *) echo -e "${VERMELHO}Opção inválida!${RESET}" ;;
