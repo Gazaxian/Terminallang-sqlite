@@ -106,8 +106,8 @@ pesquisar_frases() {
     # Escapar as aspas simples no termo de busca
     termo_escapado=$(echo "$termo" | sed "s/'/''/g")
 
-    # Pesquisar no banco de dados
-    resultados=$(sqlite3 "$DB" "SELECT frase FROM frases WHERE frase LIKE '%$termo_escapado%';")
+    # Pesquisar no banco de dados para buscar correspondências exatas
+    resultados=$(sqlite3 "$DB" "SELECT frase FROM frases WHERE frase = '$termo_escapado';")
 
     if [[ -z "$resultados" ]]; then
         echo -e "${VERMELHO}Nenhuma frase encontrada.${RESET}"
